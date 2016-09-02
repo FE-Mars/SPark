@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT，Vue, Vuejs, Vue.js" />
+  <meta name="keywords" content="Github," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="非常明显，技术已经超越我们的人性">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Spark">
-<meta property="og:url" content="http:/fstack.top/archives/index.html">
+<meta name="description" content="如何绑定自定义域名下面有几种方式都可以
+
+在github项目的setting中手动设置，如下图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Pages绑定自定义域名">
+<meta property="og:url" content="http:/fstack.top/2016/09/02/github-1/index.html">
 <meta property="og:site_name" content="Spark">
-<meta property="og:description" content="非常明显，技术已经超越我们的人性">
+<meta property="og:description" content="如何绑定自定义域名下面有几种方式都可以
+
+在github项目的setting中手动设置，如下图：">
+<meta property="og:image" content="http:/fstack.top/images/1.png">
+<meta property="og:image" content="http:/fstack.top/images/2.png">
+<meta property="og:updated_time" content="2016-09-02T03:33:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spark">
-<meta name="twitter:description" content="非常明显，技术已经超越我们的人性">
+<meta name="twitter:title" content="Github Pages绑定自定义域名">
+<meta name="twitter:description" content="如何绑定自定义域名下面有几种方式都可以
+
+在github项目的setting中手动设置，如下图：">
+<meta name="twitter:image" content="http:/fstack.top/images/1.png">
 
 
 
@@ -113,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="http:/fstack.top/archives/"/>
+  <link rel="canonical" href="http:/fstack.top/2016/09/02/github-1/"/>
 
-  <title> 归档 | Spark </title>
+  <title> Github Pages绑定自定义域名 | Spark </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +146,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,103 +224,181 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 2 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Github Pages绑定自定义域名
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-02T10:50:20+08:00" content="2016-09-02">
+              2016-09-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/02/github-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/02/github-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/02/github-1/" class="leancloud_visitors" data-flag-title="Github Pages绑定自定义域名">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h1 id="如何绑定自定义域名"><a href="#如何绑定自定义域名" class="headerlink" title="如何绑定自定义域名"></a>如何绑定自定义域名</h1><p>下面有几种方式都可以</p>
+<ol>
+<li>在github项目的setting中手动设置，如下图：<br><img src="/images/1.png" alt="Custom domain"></li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>添加CNAME<br>在你的github项目的根目录下创建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议），如下：<pre><code>fstack.top
+</code></pre></li>
+</ol>
+<p>至于域名的解析去你购买域名的服务商控制台找到域名解析项，添加对应的域名解析，如下图：<br><img src="/images/2.png" alt="域名解析"></p>
+<hr>
+<p>现在我们已经知道怎么直接在github中自定义域名了，那么怎么跟hexo一起使用呢</p>
+<ol>
+<li><p>首先我们还是类似于上面的第二中方式，在hexo项目的source目录下新建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议）, 如下：</p>
+<pre><code>fstack.top
+</code></pre></li>
+<li><p>执行如下命令：</p>
+<pre><code>hexo g  //生成静态文件
+hexo d  //部署
+</code></pre><p>也可以直接合并命令</p>
+<pre><code>hexo d -g //生成静态文件并发布
+</code></pre></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="jwang WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="jwang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Github/" rel="tag">#Github</a>
+          
+        </div>
+      
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/02/github-1/" itemprop="url">
-              
-                <span itemprop="name">Github Pages绑定自定义域名</span>
-              
-            </a>
-        
-      </h1>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/vuejs-1/" rel="next" title="Vue.js 入门指南(一)">
+                <i class="fa fa-chevron-left"></i> Vue.js 入门指南(一)
+              </a>
+            
+          </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-02T10:50:20+08:00"
-              content="2016-09-02" >
-          09-02
-        </time>
-      </div>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/01/vuejs-1/" itemprop="url">
-              
-                <span itemprop="name">Vue.js 入门指南(一)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-01T17:43:55+08:00"
-              content="2016-09-01" >
-          09-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-
+    </div>
+  </div>
 
 
           </div>
@@ -318,6 +406,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/02/github-1/"
+           data-title="Github Pages绑定自定义域名" data-url="http:/fstack.top/2016/09/02/github-1/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -337,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hellok.png"
@@ -392,6 +497,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何绑定自定义域名"><span class="nav-number">1.</span> <span class="nav-text">如何绑定自定义域名</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -488,11 +604,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
