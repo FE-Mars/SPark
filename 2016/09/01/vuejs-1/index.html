@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Spark">
 <meta property="og:description" content="什么是 Vue.js？数据驱动的组件，为现代化的 Web 界面而生的 MVVM 框架">
 <meta property="og:image" content="http:/fstack.top/images/vue_js.png">
-<meta property="og:updated_time" content="2016-09-02T03:33:53.000Z">
+<meta property="og:updated_time" content="2016-09-02T07:03:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js 入门指南(一)">
 <meta name="twitter:description" content="什么是 Vue.js？数据驱动的组件，为现代化的 Web 界面而生的 MVVM 框架">
@@ -296,8 +296,8 @@
       
         <p><img src="/images/vue_js.png" alt="Vue.js"></p>
 <h1 id="什么是-Vue-js？"><a href="#什么是-Vue-js？" class="headerlink" title="什么是 Vue.js？"></a>什么是 <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>？</h1><p>数据驱动的组件，为现代化的 Web 界面而生的 <strong><code>MVVM</code></strong> 框架</p>
-<a id="more"></a> 
-<h1 id="Vue-js的特点"><a href="#Vue-js的特点" class="headerlink" title="Vue.js的特点"></a>Vue.js的特点</h1><ul>
+<a id="more"></a>
+<h1 id="Vue-js的特点"><a href="#Vue-js的特点" class="headerlink" title="Vue.js的特点"></a><a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的特点</h1><ul>
 <li><p>简洁 <code>HTML 模板 + JSON 数据，再创建一个 Vue 实例，就这么简单。</code></p>
 </li>
 <li><p>数据驱动 <code>自动追踪依赖的模板表达式和计算属性。</code></p>
@@ -311,7 +311,13 @@
 <li><p>模块友好 <code>通过 NPM 或 Bower 安装，无缝融入你的工作流。</code></p>
 </li>
 </ul>
+<h1 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h1><p>  <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 不支持 IE8 及其以下版本，因为 <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 使用了 IE8 不能实现的 ECMAScript 5 特性。<br>  <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 支持所有<a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">兼容 ECMAScript 5 的浏览器</a>。</p>
 <hr>
+<p>以上都是官方对<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的概述。<br>接下来开始我们用<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>写一个世界上的第一个程序<code>Hello World</code>, 开始Hello World之前我们先来了解下<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的安装。</p>
+<h1 id="Vue-js的安装"><a href="#Vue-js的安装" class="headerlink" title="Vue.js的安装"></a><a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的安装</h1><p>现在阶段的前端项目基本都会使用到NPM，所以在这里就只介绍通过NPM安装<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>, 代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#安装最新文档版本</span></div><div class="line">npm install vue   </div><div class="line"><span class="comment">#最新稳定 CSP 兼容版本</span></div><div class="line">npm install vue@csp</div></pre></td></tr></table></figure></p>
+<p>在这里我推荐大家使用<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>官方提供的命令行工具，可用于快速构建大型单页面应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需一分钟即可启动带热重载、保存时静态检查以及可用于生产环境的构建配置的项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#全局安装 vue-cli</span></div><div class="line">$ npm install -g vue-cli   </div><div class="line"><span class="comment">#创建一个基于 "webpack" 模板的新项目</span></div><div class="line">$ vue init webpack my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line"><span class="comment">#安装依赖</span></div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#demo'</span>,</div><div class="line">  data: &#123;</div><div class="line">    message: <span class="string">'Hello Vue.js!'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -392,6 +398,9 @@
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
   <div class="comments" id="comments">
@@ -442,7 +451,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -452,7 +461,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -492,7 +501,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-Vue-js？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Vue.js？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js的特点"><span class="nav-number">2.</span> <span class="nav-text">Vue.js的特点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-Vue-js？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Vue.js？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js的特点"><span class="nav-number">2.</span> <span class="nav-text">Vue.js的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#兼容性"><span class="nav-number">3.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js的安装"><span class="nav-number">4.</span> <span class="nav-text">Vue.js的安装</span></a></li></ol></div>
             
           </div>
         </section>
