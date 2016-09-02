@@ -27,12 +27,11 @@
       <url>http://fstack.top/2016/09/02/github-1/</url>
       <content type="html"><![CDATA[<h1 id="如何绑定自定义域名"><a href="#如何绑定自定义域名" class="headerlink" title="如何绑定自定义域名"></a>如何绑定自定义域名</h1><p>下面有几种方式都可以</p>
 <ol>
-<li>在github项目的setting中手动设置，如下图：<br><img src="/images/1.png" alt="Custom domain"></li>
-</ol>
+<li><p>在github项目的setting中手动设置，如下图：<br><img src="/images/1.png" alt="Custom domain"></p>
 <a id="more"></a>
-<ol>
-<li>添加CNAME<br>在你的github项目的根目录下创建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议），如下：<pre><code>fstack.top
-</code></pre></li>
+</li>
+<li><p>添加CNAME<br>在你的github项目的根目录下创建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议），如下：<br>fstack.top</p>
+</li>
 </ol>
 <p>至于域名的解析去你购买域名的服务商控制台找到域名解析项，添加对应的域名解析，如下图：<br><img src="/images/2.png" alt="域名解析"></p>
 <hr>
