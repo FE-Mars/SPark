@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Hexo 代码高亮问题]]></title>
+      <url>http:/fstack.top/2016/09/02/hexo-1/</url>
+      <content type="html"><![CDATA[<p>Hexo Markdown的语法规则可以参考<a href="https://coding.net/help/doc/project/markdown.html" target="_blank" rel="external">Markdown语法</a>。<br>Markdown语法中实现代码高亮有以下三种方式：<br><a id="more"></a></p>
+<ol>
+<li>使用tab缩进的方式（这种方式在Hexo中代码不支持高亮）</li>
+<li><p>格式规则如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; ```javascript (三点后面跟语言名）</div><div class="line">&gt; var a = &apos;hello world&apos;;</div><div class="line">&gt; console.log(a);</div><div class="line">&gt; ``` //</div></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'hello world'</span>;</div><div class="line"><span class="built_in">console</span>.log(a);</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用代码块的语法，具体可以看<a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="external">Codeblock - Octopress</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock [lang:language] [title] [url] [link text] %&#125;</div><div class="line">code snippet</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>个人推荐第二种方式，码农能少写些代码必须少写:smile:</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Github Pages绑定自定义域名]]></title>
+      <url>http:/fstack.top/2016/09/02/github-1/</url>
+      <content type="html"><![CDATA[<h1 id="如何绑定自定义域名"><a href="#如何绑定自定义域名" class="headerlink" title="如何绑定自定义域名"></a>如何绑定自定义域名</h1><p>下面有几种方式都可以</p>
+<ol>
+<li>在github项目的setting中手动设置，如下图：<br><img src="/images/1.png" alt="Custom domain"></li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>添加CNAME<br>在你的github项目的根目录下创建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议），如下：<pre><code>fstack.top
+</code></pre></li>
+</ol>
+<p>至于域名的解析去你购买域名的服务商控制台找到域名解析项，添加对应的域名解析，如下图：<br><img src="/images/2.png" alt="域名解析"></p>
+<hr>
+<p>现在我们已经知道怎么直接在github中自定义域名了，那么怎么跟hexo一起使用呢</p>
+<ol>
+<li><p>首先我们还是类似于上面的第二中方式，在hexo项目的source目录下新建一个CNAME文件（无扩展名），在文件中添加你自己的域名（不需要http协议）, 如下：</p>
+<pre><code>fstack.top
+</code></pre></li>
+<li><p>执行如下命令：</p>
+<pre><code>hexo g  //生成静态文件
+hexo d  //部署
+</code></pre><p>也可以直接合并命令</p>
+<pre><code>hexo d -g //生成静态文件并发布
+</code></pre></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Vue.js 入门指南(一)]]></title>
+      <url>http:/fstack.top/2016/09/01/vuejs-1/</url>
+      <content type="html"><![CDATA[<p><img src="/images/vue_js.png" alt="Vue.js"></p>
+<h1 id="什么是-Vue-js？"><a href="#什么是-Vue-js？" class="headerlink" title="什么是 Vue.js？"></a>什么是 <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>？</h1><p>数据驱动的组件，为现代化的 Web 界面而生的 <strong><code>MVVM</code></strong> 框架</p>
+<a id="more"></a>
+<h1 id="Vue-js的特点"><a href="#Vue-js的特点" class="headerlink" title="Vue.js的特点"></a><a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的特点</h1><ul>
+<li><p>简洁 <code>HTML 模板 + JSON 数据，再创建一个 Vue 实例，就这么简单。</code></p>
+</li>
+<li><p>数据驱动 <code>自动追踪依赖的模板表达式和计算属性。</code></p>
+</li>
+<li><p>组件化 <code>用解耦、可复用的组件来构造界面。</code></p>
+</li>
+<li><p>轻量 <code>~24kb min+gzip，无依赖。</code></p>
+</li>
+<li><p>快速 <code>精确有效的异步批量 DOM 更新。</code></p>
+</li>
+<li><p>模块友好 <code>通过 NPM 或 Bower 安装，无缝融入你的工作流。</code></p>
+</li>
+</ul>
+<h1 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h1><p>  <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 不支持 IE8 及其以下版本，因为 <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 使用了 IE8 不能实现的 ECMAScript 5 特性。<br>  <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 支持所有<a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">兼容 ECMAScript 5 的浏览器</a>。</p>
+<hr>
+<p>以上都是官方对<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的概述。<br>接下来开始我们用<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>写一个世界上的第一个程序<code>Hello World</code>, 开始Hello World之前我们先来了解下<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的安装。</p>
+<h1 id="Vue-js的安装"><a href="#Vue-js的安装" class="headerlink" title="Vue.js的安装"></a><a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>的安装</h1><p>现在阶段的前端项目基本都会使用到NPM，所以在这里就只介绍通过NPM安装<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>, 代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#安装最新文档版本</span></div><div class="line">npm install vue   </div><div class="line"><span class="comment">#最新稳定 CSP 兼容版本</span></div><div class="line">npm install vue@csp</div></pre></td></tr></table></figure></p>
+<p>在这里我推荐大家使用<a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a>官方提供的命令行工具，可用于快速构建大型单页面应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需一分钟即可启动带热重载、保存时静态检查以及可用于生产环境的构建配置的项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#全局安装 vue-cli</span></div><div class="line">$ npm install -g vue-cli   </div><div class="line"><span class="comment">#创建一个基于 "webpack" 模板的新项目</span></div><div class="line">$ vue init webpack my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line"><span class="comment">#安装依赖</span></div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#demo'</span>,</div><div class="line">  data: &#123;</div><div class="line">    message: <span class="string">'Hello Vue.js!'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
